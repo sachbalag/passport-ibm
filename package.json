@@ -1,0 +1,18 @@
+{
+  "name": "passport-ibm",
+  "version": "0.0.0",
+  "description": "IBM BlueID (OpenID) authentication strategy for Passport.",
+  "repository": {
+    "type": "git",
+    "url": "git@github.rtp.raleigh.ibm.com:saas-devops/passport-ibm.git"
+  },
+  "author": {
+    "name": "Sachin Balagopalan",
+    "email": "sachin.balagopalan@us.ibm.com"
+  },
+  "main": "./lib/passport-ibm",
+  "dependencies": {
+    "pkginfo": "0.2.x",
+    "passport-openid": "0.3.x"
+  }
+}
