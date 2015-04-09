@@ -27,14 +27,14 @@ Once you download this module install the dependencies if necessary
 
 The IBM authentication strategy authenticates users who have an IBM ID
 which is also their OpenID 2.0 identifier. The strategy requires the developer
-to implement a callback, which accepts the IBM ID (identifier) and calls 'done'
-and passing in a 'user' object.
+to implement a callback, which accepts the IBM ID (identifier), calls 'done'
+and injects a 'user' object.
 Options can also be supplied to specify a return URL, a realm and
 profile exchange which defaults to true.
 
     passport.use('ibm', new IBMStrategy({
 
-           returnURL: 'http://localhost.ibmserviceengage.com:3005/auth/openid/return',
+           returnURL: 'http://localhost.ibmserviceengage.com:3005/auth/ibm/return',
            realm: 'http://localhost.ibmserviceengage.com:3005/'
         },
 
