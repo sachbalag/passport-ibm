@@ -25,11 +25,12 @@ Once you download this module install the dependencies if necessary
 
 #### Configuring the strategy
 
-The IBM authentication strategy authenticates users using a IBM ID,
-which is also an OpenID 2.0 identifier.  The strategy requires a 
-callback, which accepts this identifier and calls `done` providing a user.
+The IBM authentication strategy authenticates users who have an IBM ID
+which is also their OpenID 2.0 identifier. The strategy requires the developer
+to implement a callback, which accepts the IBM ID (identifier) and calls 'done'
+and passing in a 'user' object.
 Options can also be supplied to specify a return URL, a realm and
-profile excchange which defaults to true.
+profile exchange which defaults to true.
 
     passport.use('ibm', new IBMStrategy({
 
@@ -50,10 +51,10 @@ profile excchange which defaults to true.
 
 #### Authenticate Requests
 
-Use `passport.authenticate()`, and specify the `'ibm'` strategy, to
+Use passport.authenticate() and specify the `'ibm'` strategy, to
 authenticate requests.
 
-For example, as route middleware in an [Express](http://expressjs.com/)
+Here is an example for route middleware in an [Express](http://expressjs.com/)
 application:
 
     app.get('/auth', passport.authenticate('ibm'),function (req, res) 
@@ -61,6 +62,7 @@ application:
         res.status(200).end();
     });
     
+    // This is the return URL called by Passport
     app.get('/auth/ibm/return', 
       passport.authenticate('ibm', { failureRedirect: '/loginpage' }),
       function(req, res) {
@@ -69,7 +71,7 @@ application:
       });
 
 
-## Author
+## Contact
 
   - [Sachin Balagopalan](sachin.balagopalan@us.ibm.com)
 
