@@ -12,14 +12,7 @@ any application or framework that supports or impements
 
 ## Installing
 
-This module is currently not available on the NPM registry.
-It can be downloaded from Git..
-    
-    git@github.rtp.raleigh.ibm.com:saas-devops/passport-ibm.git
-    
-Once you download this module install the dependencies if necessary
-   
-    $ npm install
+$ npm install --save passport-ibm
 
 ## How to use this module
 
