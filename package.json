@@ -1,6 +1,6 @@
 {
   "name": "passport-ibm",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "IBM BlueID (OpenID) authentication strategy for Passport.",
   "repository": {
     "type": "git",
